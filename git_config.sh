@@ -5,8 +5,11 @@ git config --global user.email "graysonpike@gmail.com"
 
 # Generate a new ssh key if it doesn't already exist
 FILE=~/.ssh/id_rsa.pub
-if test -f "$FILE"; then
-    ssh-keygen -t rsa -b 4096 -C "graysonpike@gmail.com"
+if test -f "$FILE"
+then
+	echo "ssh key already exists"
+else
+    ssh-keygen -t rsa -b 4096 -C "graysonpike@gmail.com" -q -N "" -f ~/.ssh/id_rsa
     eval "$(ssh-agent -s)"
     ssh-add ~/.ssh/id_rsa
 fi
