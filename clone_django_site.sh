@@ -25,17 +25,17 @@ cd ..
 # Create gunicorn service and socket
 cd ~/auto-django
 sudo cp resources/gunicorn_service_template.txt /etc/systemd/system/gunicorn-$REPO_NAME.service
-sudo sed -i 's/REPO_NAME/$REPO_NAME/g' /etc/systemd/system/gunicorn-$REPO_NAME.service
-sudo sed -i 's/PROJ_NAME/$PROJ_NAME/g' /etc/systemd/system/gunicorn-$REPO_NAME.service
+sudo sed -i "s/REPO_NAME/$REPO_NAME/g" /etc/systemd/system/gunicorn-$REPO_NAME.service
+sudo sed -i "s/PROJ_NAME/$PROJ_NAME/g" /etc/systemd/system/gunicorn-$REPO_NAME.service
 sudo cp resources/gunicorn_socket_template.txt /etc/systemd/system/gunicorn-$REPO_NAME.socket
-sudo sed -i 's/REPO_NAME/$REPO_NAME/g' /etc/systemd/system/gunicorn-$REPO_NAME.socket
-sudo sed -i 's/PROJ_NAME/$PROJ_NAME/g' /etc/systemd/system/gunicorn-$REPO_NAME.socket
+sudo sed -i "s/REPO_NAME/$REPO_NAME/g" /etc/systemd/system/gunicorn-$REPO_NAME.socket
+sudo sed -i "s/PROJ_NAME/$PROJ_NAME/g" /etc/systemd/system/gunicorn-$REPO_NAME.socket
 
 # Create nginx site and enable it
 sudo cp resources/nginx_site_template.txt /etc/nginx/sites-available/$REPO_NAME
-sudo sed -i 's/REPO_NAME/$REPO_NAME/g' /etc/nginx/sites-available/$REPO_NAME
-sudo sed -i 's/PROJ_NAME/$PROJ_NAME/g' /etc/nginx/sites-available/$REPO_NAME
-sudo sed -i 's/SERVER_NAME/$SERVER_NAME/g' /etc/nginx/sites-available/$REPO_NAME
+sudo sed -i "s/REPO_NAME/$REPO_NAME/g" /etc/nginx/sites-available/$REPO_NAME
+sudo sed -i "s/PROJ_NAME/$PROJ_NAME/g" /etc/nginx/sites-available/$REPO_NAME
+sudo sed -i "s/SERVER_NAME/$SERVER_NAME/g" /etc/nginx/sites-available/$REPO_NAME
 sudo ln -s /etc/nginx/sites-available/$REPO_NAME /etc/nginx/sites-enabled
 sudo nginx -t
 sudo systemctl restart nginx
