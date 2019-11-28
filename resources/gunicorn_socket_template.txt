@@ -1,0 +1,7 @@
+[Unit]
+Description=gunicorn socket for REPO_NAME
+[Socket]
+ListenStream=/run/gunicorn-REPO_NAME.sock
+
+[Install]
+WantedBy=sockets.target

@@ -1,0 +1,17 @@
+[Unit]
+Description=gunicorn daemon for REPO_NAME
+Requires=gunicorn-REPO_NAME.socket
+After=network.target
+
+[Service]
+User=grayson
+Group=www-data
+WorkingDirectory=/home/grayson/REPO_NAME/PROJ_NAME
+ExecStart=/home/grayson/REPO_NAME/env/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/gunicorn-REPO_NAME.sock \
+          PROJ_NAME.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
