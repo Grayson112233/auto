@@ -9,7 +9,7 @@ if test -f "$FILE"
 then
 	echo "ssh key already exists"
 else
-    ssh-keygen -t rsa -b 4096 -C "graysonpike@gmail.com" -q -N "" -f ~/.ssh/id_rsa
+    ssh-keygen -t rsa -b 4096 -C "graysonpike@gmail.com" -q -N ""
     eval "$(ssh-agent -s)"
     ssh-add ~/.ssh/id_rsa
 fi
