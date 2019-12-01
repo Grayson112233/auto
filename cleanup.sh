@@ -1,7 +1,7 @@
-# Script to remove auto-django and related resources after installation
+# Script to remove auto and related resources after installation
 
 
 cd ~
 rm -rf dotfiles
-rm -rf auto-django
+rm -rf auto
 echo "Cleanup completed. You're set to go."

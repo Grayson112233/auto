@@ -2,7 +2,7 @@
 
 ### First Time User Account Setup
 
-- cd into `~/auto-django`
+- cd into `~/auto`
 - Run `bash ~/.machine_setup.sh`
 - Run `bash ~/.lxd_setup.sh` and follow the instructions.
 - There is most likely an instance of LXD created on the machine. You can confirm this by checking for the existence of `/var/lib/lxd`.
