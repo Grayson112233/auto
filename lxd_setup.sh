@@ -2,11 +2,11 @@
 
 
 # Install dependent apt packages
-sudo apt install acl autoconf dnsmasq-base git golang libacl1-dev libcap-dev liblxc1 liblxc-dev libtool libuv1-dev make pkg-config rsync squashfs-tools tar tcl xz-utils ebtables
-sudo apt install libapparmor-dev libseccomp-dev libcap-dev
-sudo apt install lvm2 thin-provisioning-tools
-sudo apt install btrfs-tools
-sudo apt install curl gettext jq sqlite3 uuid-runtime bzr socat
+sudo apt install -y acl autoconf dnsmasq-base git golang libacl1-dev libcap-dev liblxc1 liblxc-dev libtool libuv1-dev make pkg-config rsync squashfs-tools tar tcl xz-utils ebtables
+sudo apt install -y libapparmor-dev libseccomp-dev libcap-dev
+sudo apt install -y lvm2 thin-provisioning-tools
+sudo apt install -y btrfs-tools
+sudo apt install -y curl gettext jq sqlite3 uuid-runtime bzr socat
 
 # Download lxd source
 go get -v -x -d github.com/lxc/lxd/lxc
