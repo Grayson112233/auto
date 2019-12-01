@@ -6,6 +6,8 @@ read -p "Enter repo name:" REPO_NAME
 read -p "Enter django project name:" PROJ_NAME
 read -p "Enter server name:" SERVER_NAME
 
+sudo ufw allow 'Nginx Full'
+
 cd ~
 git clone git@github.com:Grayson112233/$REPO_NAME.git
 cd $REPO_NAME

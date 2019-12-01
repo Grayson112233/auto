@@ -7,3 +7,5 @@ I've created this script as a tool for me to avoid the repetition of deploying m
 ```
 mkdir tmp && mkdir auto-django && curl -L https://github.com/Grayson112233/auto-django/tarball/master | tar xz -C tmp && cp -R tmp/*/* auto-django && rm -rf tmp
 ```
+
+Then run `cd auto-django && bash ./machine_setup.sh`.
