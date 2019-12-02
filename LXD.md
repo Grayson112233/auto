@@ -3,9 +3,9 @@
 ### First Time User Account Setup
 
 - cd into `~/auto`
-- Run `bash ~/.machine_setup.sh` and follow the instructions.
-- Run `bash ~/.gobash_setup.sh`
-- Run `bash ~/.lxd_setup.sh` and follow the instructions.
+- Run `bash machine_setup.sh` and follow the instructions.
+- Run `bash go_setup.sh`
+- Run `bash lxd_setup.sh` and follow the instructions.
 - There is most likely an instance of LXD created on the machine. You can confirm this by checking for the existence of `/var/lib/lxd`. If the directory exists, but `runlxc list` fails, you probably need to run the LXD daemon. See "Running the Daemon" below.
 - The script creates two aliases you can use to invoke *our* version of LXD.
 	- Call `runlxd` to spawn the daemon from your `$GOPATH/bin`. You will see the output on your terminal.
