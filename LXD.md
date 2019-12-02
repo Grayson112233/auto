@@ -3,10 +3,10 @@
 ### First Time User Account Setup
 
 - cd into `~/auto`
-- Run `bash ~/.machine_setup.sh`
-- Run `bash ~/.go_setup.sh`
+- Run `bash ~/.machine_setup.sh` and follow the instructions.
+- Run `bash ~/.gobash_setup.sh`
 - Run `bash ~/.lxd_setup.sh` and follow the instructions.
-- There is most likely an instance of LXD created on the machine. You can confirm this by checking for the existence of `/var/lib/lxd`.
+- There is most likely an instance of LXD created on the machine. You can confirm this by checking for the existence of `/var/lib/lxd`, or trying `runlxc list`.
 - The script creates two aliases you can use to invoke *our* version of LXD.
 	- Call `runlxd` to spawn the daemon from your `$GOPATH/bin`. You will see the output on your terminal.
 	- Call `runlxc` to invoke our lxc client (from `$GOPATH/bin`). You can of course add arguments, e.g. `runlxc list`
@@ -19,6 +19,14 @@ In most cases, you should be able to simply kill the running LXD instance, rebui
 - Rebuild LXD if you haven't already
 - Restart the machine with `sudo reboot now`
 - After logging back in, run `delete-lxd-data`. This purges `/var/lib/lxd`.
-- You should now be able to run `runlxd`.
-- You will need to also run `$GOPATH/bin/lxd init` in anther terminal to initialize new storage pools, network bridges, etc.
-- You can now use `runlxc launch` to create a new image.
+- You should now be able to run `runlxd`. **Leave the daemon running in a background terminal for the following steps.**
+- You will need to also run `$GOPATH/bin/lxd init` in anther terminal to initialize new storage pools, network bridges, etc. **Use the default options by repeatedly hitting enter.**
+- You can now use `runlxc launch` to create a new image. (see below)
+
+
+### Container management
+
+- `runlxc launch ubuntu:18.04 <containername>`
+- `runlxc list`
+- `runlxc exec <containername> /bin/bash`
+- `runlxc delete <containername>`

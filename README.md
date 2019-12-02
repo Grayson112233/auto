@@ -8,4 +8,4 @@ I've created this script as a tool for me to avoid the repetition of deploying m
 mkdir tmp && mkdir auto && curl -L https://github.com/Grayson112233/auto/tarball/master | tar xz -C tmp && cp -R tmp/*/* auto && rm -rf tmp
 ```
 
-Then run `cd auto && bash ./machine_setup.sh`.
+Then cd inside and run `bash ./machine_setup.sh`.
