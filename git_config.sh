@@ -19,3 +19,4 @@ echo "Copy the following key to GitHub as a new SSH key:"
 cat ~/.ssh/id_rsa.pub
 
 read -p "Press enter when you're done. This step must be completed before continuing."
+read -p "Are you absolutely sure you completed the step above? Press enter to continue."
