@@ -6,11 +6,14 @@
 - Run `bash ~/.machine_setup.sh` and follow the instructions.
 - Run `bash ~/.gobash_setup.sh`
 - Run `bash ~/.lxd_setup.sh` and follow the instructions.
-- There is most likely an instance of LXD created on the machine. You can confirm this by checking for the existence of `/var/lib/lxd`, or trying `runlxc list`.
+- There is most likely an instance of LXD created on the machine. You can confirm this by checking for the existence of `/var/lib/lxd`. If the directory exists, but `runlxc list` fails, you probably need to run the LXD daemon. See "Running the Daemon" below.
 - The script creates two aliases you can use to invoke *our* version of LXD.
 	- Call `runlxd` to spawn the daemon from your `$GOPATH/bin`. You will see the output on your terminal.
 	- Call `runlxc` to invoke our lxc client (from `$GOPATH/bin`). You can of course add arguments, e.g. `runlxc list`
 	- If you want to completley purge the existing installation of LXD from the system and reinstall your build, reference the instructions below.
+
+### Running the Daemon
+You will need a running instance of LXD to do anything with LXD or LXC. You should run `runlxd` in a background terminal if an instance is not already running.
 
 ### Subsequent Builds
 
