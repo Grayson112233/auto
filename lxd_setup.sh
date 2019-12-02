@@ -17,6 +17,7 @@ cd ~/go/src/github.com/lxc/lxd
 make deps
 
 read -p "IMPORTANT: Copy the above 3 lines into your ~/.bashrc using a different terminal. This step must be completed before continuing. Press enter to continue."
+read -p "Are you absolutely sure you completed the step above? Press enter to continue."
 
 source ~/.bashrc
 
