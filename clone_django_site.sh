@@ -6,6 +6,7 @@ read -p "Enter repo name:" REPO_NAME
 read -p "Enter django project name:" PROJ_NAME
 read -p "Enter server name:" SERVER_NAME
 
+sudo apt-get install -y nginx python3 python3-pip python3-venv
 sudo ufw allow 'Nginx Full'
 
 cd ~
