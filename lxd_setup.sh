@@ -18,12 +18,15 @@ make deps
 
 read -p "IMPORTANT: Copy the above 3 lines into your ~/.bashrc using a different terminal. This step must be completed before continuing. Press enter to continue."
 
+source ~/.bashrc
 
 # Create aliases for sudo
 echo "alias sudo='sudo '" >> ~/.bashrc
 echo "alias runlxd='sudo -E LD_LIBRARY_PATH=$LD_LIBRARY_PATH $GOPATH/bin/lxd --group sudo'" >> ~/.bashrc
 echo "alias runlxc='sudo $GOPATH/bin/lxc'" >> ~/.bashrc
 echo "alias delete-lxd-data='sudo pkill -f lxd && sudo pkill -f lxc && sudo rm -rf /var/lib/lxd'" >> ~/.bashrc
+
+source ~/.bashrc
 
 # Add our remote and set it
 cd ~/go/src/github.com/lxc/lxd

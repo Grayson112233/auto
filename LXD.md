@@ -4,6 +4,7 @@
 
 - cd into `~/auto`
 - Run `bash ~/.machine_setup.sh`
+- Run `bash ~/.go_setup.sh`
 - Run `bash ~/.lxd_setup.sh` and follow the instructions.
 - There is most likely an instance of LXD created on the machine. You can confirm this by checking for the existence of `/var/lib/lxd`.
 - The script creates two aliases you can use to invoke *our* version of LXD.
