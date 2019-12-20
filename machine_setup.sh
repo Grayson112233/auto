@@ -5,7 +5,7 @@
 read -p "Enter your GitHub username:" GITHUB_NAME
 read -p "Enter your GitHub-associated email:" GITHUB_EMAIL
 sudo apt-get update
-sudo apt-get install -y vim tree git unzip
+sudo apt-get install -y vim tree git unzip python3 python3-venv
 bash ./git_config.sh
 bash ./install_dotfiles.sh
 # bash ./cleanup.sh
