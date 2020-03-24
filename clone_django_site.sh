@@ -10,7 +10,7 @@ sudo apt-get install -y nginx python3 python3-pip python3-venv
 sudo ufw allow 'Nginx Full'
 
 cd ~
-git clone git@github.com:Grayson112233/$REPO_NAME.git
+git clone git@github.com:graysonpike/$REPO_NAME.git
 cd $REPO_NAME
 
 # Set up venv
